@@ -1,9 +1,9 @@
 import { aulareward } from "../../declarations/aulareward";
 
 document.getElementById("clickMeBtn").addEventListener("click", async () => {
-  const name = document.getElementById("name").value.toString();
+  const max = parseInt( document.getElementById("max").value, 10);
   // Interact with aulareward actor, calling the greet method
-  const greeting = await aulareward.greet(name);
+  const random = await aulareward.run(max);
 
-  document.getElementById("greeting").innerText = greeting;
+  document.getElementById("random").innerText = random;
 });
